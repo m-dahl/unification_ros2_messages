@@ -1,0 +1,13 @@
+-
+  ros1_package_name: 'robotiq_msgs'
+  ros1_message_name: 'CModelRobotOutput'
+  ros2_package_name: 'robotiq_msgs'
+  ros2_message_name: 'CModelRobotOutput'
+  fields_1_to_2:
+    rACT: 'r_act'
+    rGTO: 'r_gto'
+    rATR: 'r_atr' 
+    rPR: 'r_pr'
+    rPO: 'r_po'
+    rCU: 'r_cu'
+

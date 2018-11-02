@@ -29,6 +29,8 @@ rosidl_generate_interfaces(unification_msgs
   "msg/Control.msg"
   "msg/MoveItSPToUni.msg"
   "msg/MoveItUniToSP.msg"
+  "msg/CModelRobotInput.msg"
+  "msg/CModelRobotOutput.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -49,6 +51,14 @@ install(
 
 install(
   FILES moveit_unidriver_to_sp_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES robotiq_input_mapping_rules.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES robotiq_output_mapping_rules.yaml
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()
