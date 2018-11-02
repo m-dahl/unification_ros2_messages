@@ -27,6 +27,8 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(unification_msgs
   "msg/State.msg"
   "msg/Control.msg"
+  "msg/MoveItSPToUni.msg"
+  "msg/MoveItUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -40,5 +42,13 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(
+  FILES moveit_sp_to_unidriver_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES moveit_unidriver_to_sp_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
 
 ament_package()
