@@ -74,7 +74,7 @@ install(
 
 ```
 9. You can use the ros1_bridge's dynamic_bridge, but for a setup where you have nonconsistent publishing and subscribing, it is more robust to have one persistent static bridge per topic. To do this, cd intro the ros1_bridge's src folder and make a copy of the static_bridge.cpp and rename it as you like, for example: sb_topic_x.cpp. Open and edit:
-`
+```
 // ROS 1 node
   ros::init(argc, argv, "ros1_sb_topic_x");
   ros::NodeHandle ros1_node;
@@ -88,7 +88,7 @@ install(
   std::string ros1_type_name = "unification_roscontrol/messageX";
   std::string ros2_type_name = "unification_ros2_messages/messageX";
   size_t queue_size = 10;
-`
+```
 10. Open the CMakeLists.txt of the ros1_bridge package and edit it so that you add executable generation of the .cpp you have made in the previos step like:
 ```
 custom_executable(sb_topic_x
