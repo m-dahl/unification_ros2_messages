@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(unification_msgs)
+project(unification_ros2_messages)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -24,13 +24,13 @@ find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-rosidl_generate_interfaces(unification_msgs
-  "msg/State.msg"
-  "msg/Control.msg"
+rosidl_generate_interfaces(unification_ros2_messages
   "msg/MoveItSPToUni.msg"
   "msg/MoveItUniToSP.msg"
-  "msg/CModelRobotInput.msg"
-  "msg/CModelRobotOutput.msg"
+  "msg/RobotiqSPToUni.msg"
+  "msg/RobotiqUniToSP.msg"
+  #"msg/RobotiqInput.msg"
+  #"msg/RobotiqOutput.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -54,11 +54,21 @@ install(
   DESTINATION share/${PROJECT_NAME})
 
 install(
-  FILES robotiq_input_mapping_rules.yaml
+  FILES robotiq_sp_to_uni_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
 
 install(
-  FILES robotiq_output_mapping_rules.yaml
+  FILES robotiq_uni_to_sp_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
+
+#install(
+#  FILES robotiq_input_mapping_rules.yaml
+#  DESTINATION share/${PROJECT_NAME})
+
+#install(
+#  FILES robotiq_output_mapping_rules.yaml
+#  DESTINATION share/${PROJECT_NAME})
+
+
 
 ament_package()

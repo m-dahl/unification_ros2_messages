@@ -1,4 +1,3 @@
-
 uint8 g_act
 uint8 g_gto
 uint8 g_sta

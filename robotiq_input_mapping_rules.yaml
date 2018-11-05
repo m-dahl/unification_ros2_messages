@@ -1,8 +1,8 @@
 -
-  ros1_package_name: 'robotiq_msgs'
-  ros1_message_name: 'CModelRobotInput'
-  ros2_package_name: 'robotiq_msgs'
-  ros2_message_name: 'CModelRobotInput'
+  ros1_package_name: 'robotiq_c_model_control'
+  ros1_message_name: 'CModel_robot_input'
+  ros2_package_name: 'unification_ros2_messages'
+  ros2_message_name: 'RobotiqInput'
   fields_1_to_2:
     gACT: 'g_act'
     gGTO: 'g_gto'

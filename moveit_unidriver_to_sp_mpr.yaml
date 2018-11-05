@@ -1,7 +1,7 @@
 -
   ros1_package_name: 'unification_roscontrol'
   ros1_message_name: 'MoveItUniToSP'
-  ros2_package_name: 'unification_msgs'
+  ros2_package_name: 'unification_ros2_messages'
   ros2_message_name: 'MoveItUniToSP'
   fields_1_to_2:
     ur_moveit_unidriver_got_msg_from_sp: 'ur_moveit_unidriver_got_msg_from_sp'
