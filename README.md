@@ -6,29 +6,29 @@ messages for the unification project. Steps to add you own message types and suc
 1. Define a message type in your ROS1 package (named for example: unification_roscontrol) and save it in the msg folder of the package. Name the message, for example messageX.msg.
 2. Edit the CMakeLists.txt file of the ROS1 package:
     1. Uncomment the following section and add your message:
-```
-add_message_files(
-  	FILES
-	messageX.msg
-)
-```
+	```
+	add_message_files(
+  		FILES
+		messageX.msg
+	)
+	```
     2. Uncomment line 5 in the catkin_pakcage section:
-```
-catkin_package(
-	#  INCLUDE_DIRS include
-	#  LIBRARIES unification_roscontrol
-	#  CATKIN_DEPENDS other_catkin_pkg
-	#  DEPENDS system_lib
-    	CATKIN_DEPENDS message_runtime
-)
-```
+	```
+	catkin_package(
+		#  INCLUDE_DIRS include
+		#  LIBRARIES unification_roscontrol
+		#  CATKIN_DEPENDS other_catkin_pkg
+		#  DEPENDS system_lib
+    		CATKIN_DEPENDS message_runtime
+	)
+	```
     3. Uncomment the generate_messages section:
-```
-generate_messages(
-	DEPENDENCIES
-  	std_msgs  # Or other packages containing msgs
-)
-```
+	```
+	generate_messages(
+		DEPENDENCIES
+  		std_msgs  # Or other packages containing msgs
+	)
+	```
 3. Edit the package.xml file so that you have the following lines uncommented:
 ```
 <build_depend>message_generation</build_depend>
@@ -51,20 +51,20 @@ generate_messages(
 ```	
 7. Edit the CMakeLists.txt file of the ROS2 unification_ros2_messages package:
     1. Add your message type in the section:
-```
-rosidl_generate_interfaces(unification_ros2_messages
-  	"msg/message1.msg"
-  	"msg/message2.msg"
-  	"msg/messageX.msg"
-  	DEPENDENCIES builtin_interfaces
-)
-```
+	```
+	rosidl_generate_interfaces(unification_ros2_messages
+  		"msg/message1.msg"
+  		"msg/message2.msg"
+  		"msg/messageX.msg"
+  		DEPENDENCIES builtin_interfaces
+	)
+	```
     2. After the BUILD_TESTING section, add the installation rule for the messageX_mpr.yaml file:
-```
-install(
-	FILES messageX_mpr.yaml
-  	DESTINATION share/${PROJECT_NAME})
-```
+	```
+	install(
+		FILES messageX_mpr.yaml
+  		DESTINATION share/${PROJECT_NAME})
+	```
 8. Edit the package.xml so that in the export section you add the mapping rule:
 ```
 <export>
