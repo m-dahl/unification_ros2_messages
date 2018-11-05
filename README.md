@@ -5,14 +5,14 @@ messages for the unification project. Steps to add you own message types and suc
 
 1. Define a message type in your ROS1 package (named for example: unification_roscontrol) and save it in the msg folder of the package. Name the message, for example messageX.msg.
 2. Edit the CMakeLists.txt file of the ROS1 package:
-    i. Uncomment the following section and add your message:
+    1. Uncomment the following section and add your message:
 ```
 add_message_files(
   	FILES
 	messageX.msg
 )
 ```
-    ii. Uncomment line 5 in the catkin_pakcage section:
+    2. Uncomment line 5 in the catkin_pakcage section:
 ```
 catkin_package(
 	#  INCLUDE_DIRS include
@@ -22,7 +22,7 @@ catkin_package(
     	CATKIN_DEPENDS message_runtime
 )
 ```
-    iii. Uncomment the generate_messages section:
+    3. Uncomment the generate_messages section:
 ```
 generate_messages(
 	DEPENDENCIES
@@ -50,7 +50,7 @@ generate_messages(
     ros1_msg_field_3: 'ros2_msg_field_3'
 ```	
 7. Edit the CMakeLists.txt file of the ROS2 unification_ros2_messages package:
-    i. Add your message type in the section:
+    1. Add your message type in the section:
 ```
 rosidl_generate_interfaces(unification_ros2_messages
   	"msg/message1.msg"
@@ -59,7 +59,7 @@ rosidl_generate_interfaces(unification_ros2_messages
   	DEPENDENCIES builtin_interfaces
 )
 ```
-    ii. After the BUILD_TESTING section, add the installation rule for the messageX_mpr.yaml file:
+    2. After the BUILD_TESTING section, add the installation rule for the messageX_mpr.yaml file:
 ```
 install(
 	FILES messageX_mpr.yaml
@@ -108,7 +108,7 @@ colcon build --symlink-install --packages-skip ros1_bridge
 ```
 colcon build --symlink-install --packages-select ros1_bridge --cmake-force-configure
 ```
-11. All done. You should be able to have your bridge up and running when you:
+14. All done. You should be able to have your bridge up and running when you:
     i. Open a terminal and source the ROS1 environment
     ii. Then, source the ROS2 environment
     iii. ros2 run ros1_bridge sb_topic_x
