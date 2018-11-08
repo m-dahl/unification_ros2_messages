@@ -23,6 +23,9 @@
     <ros1_bridge mapping_rules="moveit_sp_to_unidriver_mpr.yaml"/>
     <ros1_bridge mapping_rules="robotiq_sp_to_uni_mpr.yaml"/>
     <ros1_bridge mapping_rules="robotiq_uni_to_sp_mpr.yaml"/>
+    <ros1_bridge mapping_rules="updater_sp_to_uni_mpr.yaml"/>
+    <ros1_bridge mapping_rules="updater_uni_to_sp_mpr.yaml"/>
+
 
     <!--
     <ros1_bridge mapping_rules="robotiq_mpr.yaml"/>
