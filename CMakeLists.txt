@@ -30,8 +30,8 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/RobotiqSPToUni.msg"
   "msg/RobotiqUniToSP.msg"
   "msg/HecuUniToSP.msg"
-  #"msg/RobotiqInput.msg"
-  #"msg/RobotiqOutput.msg"
+  "msg/UpdaterSPToUni.msg"
+  "msg/UpdaterUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -62,13 +62,13 @@ install(
   FILES robotiq_uni_to_sp_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
 
-#install(
-#  FILES robotiq_input_mapping_rules.yaml
-#  DESTINATION share/${PROJECT_NAME})
+install(
+  FILES updater_sp_to_uni_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
 
-#install(
-#  FILES robotiq_output_mapping_rules.yaml
-#  DESTINATION share/${PROJECT_NAME})
+install(
+  FILES updater_uni_to_sp_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
 
 
 
