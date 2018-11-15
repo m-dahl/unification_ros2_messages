@@ -29,6 +29,7 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/MoveItUniToSP.msg"
   "msg/RobotiqSPToUni.msg"
   "msg/RobotiqUniToSP.msg"
+  "msg/HecuUniToSP.msg"
   #"msg/RobotiqInput.msg"
   #"msg/RobotiqOutput.msg"
   DEPENDENCIES builtin_interfaces
