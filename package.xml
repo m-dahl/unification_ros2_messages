@@ -19,19 +19,12 @@
   <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
-    <ros1_bridge mapping_rules="moveit_unidriver_to_sp_mpr.yaml"/>
-    <ros1_bridge mapping_rules="moveit_sp_to_unidriver_mpr.yaml"/>
+    <ros1_bridge mapping_rules="moveit_uni_to_sp_mpr.yaml"/>
+    <ros1_bridge mapping_rules="moveit_sp_to_uni_mpr.yaml"/>
     <ros1_bridge mapping_rules="robotiq_sp_to_uni_mpr.yaml"/>
     <ros1_bridge mapping_rules="robotiq_uni_to_sp_mpr.yaml"/>
     <ros1_bridge mapping_rules="updater_sp_to_uni_mpr.yaml"/>
     <ros1_bridge mapping_rules="updater_uni_to_sp_mpr.yaml"/>
-
-
-    <!--
-    <ros1_bridge mapping_rules="robotiq_mpr.yaml"/>
-    <ros1_bridge mapping_rules="robotiq_input_mapping_rules.yaml"/>
-    <ros1_bridge mapping_rules="robotiq_output_mapping_rules.yaml"/>
-    -->
     <build_type>ament_cmake</build_type>
   </export>
 </package>

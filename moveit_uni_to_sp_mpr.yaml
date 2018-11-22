@@ -1,5 +1,5 @@
 -
-  ros1_package_name: 'unification_roscontrol'
+  ros1_package_name: 'ros1_unification_2019'
   ros1_message_name: 'MoveItUniToSP'
   ros2_package_name: 'unification_ros2_messages'
   ros2_message_name: 'MoveItUniToSP'

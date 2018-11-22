@@ -46,11 +46,11 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  FILES moveit_sp_to_unidriver_mpr.yaml
+  FILES moveit_sp_to_uni_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
 
 install(
-  FILES moveit_unidriver_to_sp_mpr.yaml
+  FILES moveit_uni_to_sp_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
 
 install(
