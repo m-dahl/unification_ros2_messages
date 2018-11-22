@@ -1,7 +1,13 @@
 # unification_ros2_messages
 
+
 A ROS2 package providing ROS2 message types and mapping rules for bridging ROS1 and ROS2
 messages for the unification project. Steps to add you own message types and succesfully bridge:
+
+## Launch all the bridges
+ros2 launch unification_ros2_messages unification_bridges.launch.py
+
+## Setup
 
 1. Define a message type in your ROS1 package (named for example: unification_roscontrol) and save it in the msg folder of the package. Name the message, for example messageX.msg.
 2. Edit the CMakeLists.txt file of the ROS1 package:
