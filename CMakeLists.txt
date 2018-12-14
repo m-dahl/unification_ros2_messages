@@ -32,6 +32,8 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/HecuUniToSP.msg"
   "msg/UpdaterSPToUni.msg"
   "msg/UpdaterUniToSP.msg"
+  "msg/RecuSPToUni.msg"
+  "msg/RecuUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
