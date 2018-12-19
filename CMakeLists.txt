@@ -31,6 +31,13 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/RobotiqUniToSP.msg"
   "msg/UpdaterSPToUni.msg"
   "msg/UpdaterUniToSP.msg"
+  "msg/Common.msg"
+  "msg/URPoseSPToUni.msg"
+  "msg/URPoseSPToUniRicochet.msg"
+  "msg/URPoseUniToSP.msg"
+  "msg/KinectHumans.msg"
+  "msg/HumanJoints.msg"
+  "msg/JointPosition.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -68,6 +75,24 @@ install(
 install(
   FILES updater_uni_to_sp_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
+
+# pose updater map
+install(
+  FILES unidriver_uni_to_sp_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES unidriver_sp_to_uni_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES unidriver_sp_to_uni_ricochet_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
+
+install(
+  FILES common.yaml
+  DESTINATION share/${PROJECT_NAME})
+
 
 # Install launch files.
 install(DIRECTORY

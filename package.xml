@@ -25,6 +25,12 @@
     <ros1_bridge mapping_rules="robotiq_uni_to_sp_mpr.yaml"/>
     <ros1_bridge mapping_rules="updater_sp_to_uni_mpr.yaml"/>
     <ros1_bridge mapping_rules="updater_uni_to_sp_mpr.yaml"/>
+
+    <ros1_bridge mapping_rules="unidriver_uni_to_sp_mpr.yaml"/>
+    <ros1_bridge mapping_rules="unidriver_sp_to_uni_mpr.yaml"/>
+    <ros1_bridge mapping_rules="unidriver_sp_to_uni_ricochet_mpr.yaml"/>
+    <ros1_bridge mapping_rules="common.yaml"/>
+
     <build_type>ament_cmake</build_type>
   </export>
 </package>

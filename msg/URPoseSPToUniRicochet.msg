@@ -1,0 +1,8 @@
+string got_action
+string got_robot_type
+string got_robot_name
+string got_pose_type
+string got_pose_name
+string got_speed_scaling
+string got_acc_scaling
+string got_goal_tolerance
