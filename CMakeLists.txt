@@ -29,8 +29,10 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/MoveItUniToSP.msg"
   "msg/RobotiqSPToUni.msg"
   "msg/RobotiqUniToSP.msg"
+  "msg/HecuUniToSP.msg"
   "msg/UpdaterSPToUni.msg"
   "msg/UpdaterUniToSP.msg"
+<<<<<<< HEAD
   "msg/Common.msg"
   "msg/URPoseSPToUni.msg"
   "msg/URPoseSPToUniRicochet.msg"
@@ -38,6 +40,10 @@ rosidl_generate_interfaces(unification_ros2_messages
   "msg/KinectHumans.msg"
   "msg/HumanJoints.msg"
   "msg/JointPosition.msg"
+=======
+  "msg/RecuSPToUni.msg"
+  "msg/RecuUniToSP.msg"
+>>>>>>> aad62d6150c963e75d92f6c1ad9b4492f5cc3a8c
   DEPENDENCIES builtin_interfaces
 )
 
