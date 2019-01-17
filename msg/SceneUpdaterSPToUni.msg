@@ -1,0 +1,2 @@
+string object_action
+string object_name

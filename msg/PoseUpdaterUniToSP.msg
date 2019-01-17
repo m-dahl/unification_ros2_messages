@@ -1,0 +1,4 @@
+Common info
+PoseUpdaterSPToUniRicochet ricochet
+SavedPoses saved_poses
+string last_completed_action

@@ -12,5 +12,3 @@
     speed_scaling: 'speed_scaling'
     acc_scaling: 'acc_scaling'
     goal_tolerance: 'goal_tolerance'
-
-

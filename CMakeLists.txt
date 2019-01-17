@@ -26,14 +26,16 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(unification_ros2_messages
   "msg/Common.msg"
+  "msg/PoseUpdaterSPToUni.msg"
+  "msg/PoseUpdaterSPToUniRicochet.msg"
+  "msg/PoseUpdaterUniToSP.msg"
+  "msg/SavedPoses.msg"
+  "msg/SceneUpdaterSPToUni.msg"
+  "msg/SceneUpdaterSPToUniRicochet.msg"
+  "msg/SceneUpdaterUniToSP.msg"
   "msg/URPoseSPToUni.msg"
   "msg/URPoseSPToUniRicochet.msg"
   "msg/URPoseUniToSP.msg"
-  "msg/KinectHumans.msg"
-  "msg/HumanJoints.msg"
-  "msg/JointPosition.msg"
-  "msg/RecuSPToUni.msg"
-  "msg/RecuUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -49,46 +51,17 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  FILES moveit_sp_to_uni_mpr.yaml
+  FILES pose_updater_sp_to_uni_mpr.yaml
+  pose_updater_sp_to_uni_ricochet_mpr.yaml
+  pose_updater_uni_to_sp_mpr.yaml
+  saved_poses.yaml
+  scene_updater_sp_to_uni_mpr.yaml
+  scene_updater_sp_to_uni_ricochet_mpr.yaml
+  scene_updater_uni_to_sp_mpr.yaml
+  ur_pose_sp_to_uni_mpr.yaml
+  ur_pose_sp_to_uni_ricochet_mpr.yaml
+  ur_pose_uni_to_sp_mpr.yaml
   DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES moveit_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES robotiq_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES robotiq_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES updater_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES updater_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-# pose updater map
-install(
-  FILES unidriver_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES unidriver_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES unidriver_sp_to_uni_ricochet_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES common.yaml
-  DESTINATION share/${PROJECT_NAME})
-
 
 # Install launch files.
 install(DIRECTORY

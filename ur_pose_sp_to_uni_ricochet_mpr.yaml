@@ -4,7 +4,6 @@
   ros2_package_name: 'unification_ros2_messages'
   ros2_message_name: 'URPoseSPToUniRicochet'
   fields_1_to_2:
-
     got_action: 'got_action'
     got_robot_type: 'got_robot_type'
     got_robot_name: 'got_robot_name'
