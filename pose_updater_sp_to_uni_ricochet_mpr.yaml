@@ -6,5 +6,5 @@
   fields_1_to_2:
     got_action: 'got_action'
     got_robot_type: 'got_robot_type'
-    got_pose_type: 'got_pose_type'
+    got_robot_name: 'got_robot_name'
     got_pose_name: 'got_pose_name'
