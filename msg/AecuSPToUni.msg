@@ -1,0 +1,7 @@
+bool set_tool_idle
+bool run_tool_forward
+bool run_tool_in_reverse
+bool inhibit_all_run_also_manual
+bool activate_unload
+bool activate_lift
+

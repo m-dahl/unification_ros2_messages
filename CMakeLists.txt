@@ -25,10 +25,20 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(unification_ros2_messages
+  "msg/AecuSPToUni.msg"
+  "msg/AecuUniToSP.msg"
   "msg/Common.msg"
+  "msg/HecuUniToSP.msg"
+  "msg/HumanJoints.msg"
+  "msg/JointPosition.msg"
+  "msg/KinectHumans.msg"
   "msg/PoseUpdaterSPToUni.msg"
   "msg/PoseUpdaterSPToUniRicochet.msg"
   "msg/PoseUpdaterUniToSP.msg"
+  "msg/RecuSPToUni.msg"
+  "msg/RecuUniToSP.msg"
+  "msg/RobotiqSPToUni.msg"
+  "msg/RobotiqUniToSP.msg"
   "msg/SavedPoses.msg"
   "msg/SceneUpdaterSPToUni.msg"
   "msg/SceneUpdaterSPToUniRicochet.msg"
