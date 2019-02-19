@@ -6,3 +6,5 @@
   fields_1_to_2:
     state: 'state'
     ricochet: 'ricochet'
+    scene_objects: 'scene_objects'
+    attached_objects: 'attached_objects'

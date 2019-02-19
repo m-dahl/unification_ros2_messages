@@ -8,3 +8,5 @@
     ricochet: 'ricochet'
     moving: 'moving'
     actual_pose: 'actual_pose'
+    moveit_state: 'moveit_state'
+    moveit_message: 'moveit_message'
