@@ -14,3 +14,6 @@ bool ladder_frame_not_connected
 bool ladder_frame_connected
 bool ladder_frame_connection_failure
 bool pressure_ok
+
+bool rsp_is_locked
+bool gripper_is_closed

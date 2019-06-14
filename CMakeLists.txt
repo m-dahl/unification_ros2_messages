@@ -25,28 +25,32 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(unification_ros2_messages
-  # "msg/MoveItSPToUni.msg"
-  # "msg/MoveItUniToSP.msg"
-  # "msg/RobotiqSPToUni.msg"
-  # "msg/RobotiqUniToSP.msg"
-  # "msg/UpdaterSPToUni.msg"
-  # "msg/UpdaterUniToSP.msg"
-  # "msg/KinectHumans.msg"
-  # "msg/HumanJoints.msg"
-  # "msg/JointPosition.msg"
+
+  "msg/AecuSPToUni.msg"
+  "msg/AecuUniToSP.msg"
+  "msg/Common.msg"
+  "msg/HecuUniToSP.msg"
   "msg/Tooldrivertointerfacer.msg"
   "msg/Toolinterfacertodriver.msg"
   "msg/Toolinterfacertosp.msg"
   "msg/Toolsptointerfacer.msg"
-  "msg/KinectHumans.msg"
   "msg/HumanJoints.msg"
   "msg/JointPosition.msg"
-  "msg/Gestures.msg"
-  "msg/AecuUniToSP.msg"
-  "msg/AecuSPToUni.msg"
-  "msg/RecuUniToSP.msg"
+  "msg/KinectHumans.msg"
+  "msg/PoseUpdaterSPToUni.msg"
+  "msg/PoseUpdaterSPToUniRicochet.msg"
+  "msg/PoseUpdaterUniToSP.msg"
   "msg/RecuSPToUni.msg"
-  "msg/HecuUniToSP.msg"
+  "msg/RecuUniToSP.msg"
+  "msg/RobotiqSPToUni.msg"
+  "msg/RobotiqUniToSP.msg"
+  "msg/SavedPoses.msg"
+  "msg/SceneUpdaterSPToUni.msg"
+  "msg/SceneUpdaterSPToUniRicochet.msg"
+  "msg/SceneUpdaterUniToSP.msg"
+  "msg/URPoseSPToUni.msg"
+  "msg/URPoseSPToUniRicochet.msg"
+  "msg/URPoseUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -84,6 +88,18 @@ endif()
 #install(
 #  FILES updater_uni_to_sp_mpr.yaml
 #  DESTINATION share/${PROJECT_NAME})
+install(
+  FILES pose_updater_sp_to_uni_mpr.yaml
+  pose_updater_sp_to_uni_ricochet_mpr.yaml
+  pose_updater_uni_to_sp_mpr.yaml
+  saved_poses.yaml
+  scene_updater_sp_to_uni_mpr.yaml
+  scene_updater_sp_to_uni_ricochet_mpr.yaml
+  scene_updater_uni_to_sp_mpr.yaml
+  ur_pose_sp_to_uni_mpr.yaml
+  ur_pose_sp_to_uni_ricochet_mpr.yaml
+  ur_pose_uni_to_sp_mpr.yaml
+  DESTINATION share/${PROJECT_NAME})
 
 # Install launch files.
 install(DIRECTORY

@@ -1,0 +1,14 @@
+-
+  ros1_package_name: 'ros1_unification_2019'
+  ros1_message_name: 'URPoseSPToUni'
+  ros2_package_name: 'unification_ros2_messages'
+  ros2_message_name: 'URPoseSPToUni'
+  fields_2_to_1:
+    action: 'action'
+    robot_type: 'robot_type'
+    robot_name: 'robot_name'
+    pose_type: 'pose_type'
+    pose_name: 'pose_name'
+    speed_scaling: 'speed_scaling'
+    acc_scaling: 'acc_scaling'
+    goal_tolerance: 'goal_tolerance'

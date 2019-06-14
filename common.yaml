@@ -1,0 +1,12 @@
+-
+  ros1_package_name: 'ros1_unification_2019'
+  ros1_message_name: 'Common'
+  ros2_package_name: 'unification_ros2_messages'
+  ros2_message_name: 'Common'
+  fields_1_to_2:
+
+    robot_name: 'robot_name'
+    fresh_msg: 'fresh_msg'
+    t_plus: 't_plus'
+    got_reset: 'got_reset'
+    error_list: 'error_list'
