@@ -1,0 +1,17 @@
+bool aecu_unidriver_got_msg_from_sp
+bool got_cmd_set_tool_idle
+bool got_cmd_run_tool_forward
+bool got_cmd_run_tool_in_reverse
+bool got_cmd_inhibit_all_run_also_manual
+bool got_cmd_activate_unload
+bool got_cmd_activate_lift
+
+bool tool_is_idle
+bool tool_is_running_forward
+bool tool_is_running_reverse
+bool tool_is_in_alarm
+bool positioned_at_home_station
+bool operating_position
+bool pre_home_position
+bool unclear_position
+bool programmed_torque_reached

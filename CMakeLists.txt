@@ -25,12 +25,28 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(unification_ros2_messages
-  "msg/MoveItSPToUni.msg"
-  "msg/MoveItUniToSP.msg"
-  "msg/RobotiqSPToUni.msg"
-  "msg/RobotiqUniToSP.msg"
-  "msg/UpdaterSPToUni.msg"
-  "msg/UpdaterUniToSP.msg"
+  # "msg/MoveItSPToUni.msg"
+  # "msg/MoveItUniToSP.msg"
+  # "msg/RobotiqSPToUni.msg"
+  # "msg/RobotiqUniToSP.msg"
+  # "msg/UpdaterSPToUni.msg"
+  # "msg/UpdaterUniToSP.msg"
+  # "msg/KinectHumans.msg"
+  # "msg/HumanJoints.msg"
+  # "msg/JointPosition.msg"
+  "msg/Tooldrivertointerfacer.msg"
+  "msg/Toolinterfacertodriver.msg"
+  "msg/Toolinterfacertosp.msg"
+  "msg/Toolsptointerfacer.msg"
+  "msg/KinectHumans.msg"
+  "msg/HumanJoints.msg"
+  "msg/JointPosition.msg"
+  "msg/Gestures.msg"
+  "msg/AecuUniToSP.msg"
+  "msg/AecuSPToUni.msg"
+  "msg/RecuUniToSP.msg"
+  "msg/RecuSPToUni.msg"
+  "msg/HecuUniToSP.msg"
   DEPENDENCIES builtin_interfaces
 )
 
@@ -45,29 +61,29 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(
-  FILES moveit_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES moveit_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES robotiq_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES robotiq_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES updater_sp_to_uni_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
-
-install(
-  FILES updater_uni_to_sp_mpr.yaml
-  DESTINATION share/${PROJECT_NAME})
+#install(
+#  FILES moveit_sp_to_uni_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
+#
+#install(
+#  FILES moveit_uni_to_sp_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
+#
+#install(
+#  FILES robotiq_sp_to_uni_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
+#
+#install(
+#  FILES robotiq_uni_to_sp_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
+#
+#install(
+#  FILES updater_sp_to_uni_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
+#
+#install(
+#  FILES updater_uni_to_sp_mpr.yaml
+#  DESTINATION share/${PROJECT_NAME})
 
 # Install launch files.
 install(DIRECTORY
